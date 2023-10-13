@@ -1,0 +1,24 @@
+{
+    "name": "ibrush",
+    "version": "1.0.0",
+    "description": "Тестовое / верстка / осень 2023",
+    "scripts": {
+        "dev": "parcel src/index.html --open",
+        "build": "rm -rf build && parcel build src/index.html --dist-dir build"
+    },
+    "author": "Igor Feoktistov",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.4.2",
+        "parcel": "^2.2.1",
+        "postcss-modules": "^4.3.0",
+        "sass": "^1.26.5"
+    },
+    "browserslist": [
+        "last 5 version",
+        "ie 10"
+    ],
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.2.1"
+    }
+}

@@ -1,0 +1,238 @@
+.review {
+    background-color: #EDEDED;
+    padding: 40px 0;
+    font-family: 'ArialMT', sans-serif;
+    @media ($mobile) {
+        padding: 40px 20px;
+    }
+
+    &__rating-title, &__comments-title {
+        margin-bottom: 10px;
+        color: #202326;
+        font-family: "Consolas";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;  
+    }
+    &__comments-title {
+        margin-bottom: 15px;
+    }
+    @media ($mobile) {
+        &__rating-title {
+            margin-bottom: 15px;
+        }
+        &__comments-title {
+            margin-bottom: 10px;
+        }
+    }
+    .rating-area {
+        overflow: hidden;
+        width: 169px;
+        margin-bottom: 30px;
+        @media ($mobile) {
+            margin-bottom: 20px;
+        }
+    }
+    .rating-area:not(:checked) > input {
+        display: none;
+    }
+    .rating-area:not(:checked) > label {
+        float: right;
+        margin-left: 10px;
+        width: 25px;
+        padding: 0;
+        cursor: pointer;
+        font-size: 25px;
+        line-height: 25px;
+        color: white;
+    }
+    .rating-area:not(:checked) > label:last-of-type {
+        margin-left: 0;
+    }
+    .rating-area:not(:checked) > label:before {
+        content: '★';
+    }
+    .rating-area > input:checked ~ label {
+        color: #FFB400;
+        text-shadow: 1px 1px #c60;
+    }
+    .rating-area:not(:checked) > label:hover,
+    .rating-area:not(:checked) > label:hover ~ label {
+        color: #FFB400;
+    }
+    .rating-area > input:checked + label:hover,
+    .rating-area > input:checked + label:hover ~ label,
+    .rating-area > input:checked ~ label:hover,
+    .rating-area > input:checked ~ label:hover ~ label,
+    .rating-area > label:hover ~ input:checked ~ label {
+        color: #FFB400;
+        text-shadow: 1px 1px goldenrod;
+    }
+    .rate-area > label:active {
+        position: relative;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 20px;
+
+        @media ($mobile) {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+    &__form-name {
+        position: relative;
+        font-size: 14px;
+        @media ($mobile) {
+            width: 280px;
+        }
+        #name {
+            width: 100%;
+            padding: 18px 20px 6px;
+        }
+        #name + label {
+            position: absolute;
+            top: 7px;
+            left: 21px;
+            color: #777;
+            line-height: 14px;
+        }
+    }
+    &__form-input {
+        display: inline-block;
+        width: 226px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 15px;
+        padding: 18px 20px;
+        border: 2px solid transparent;
+        background-color: #fff;
+        color: #222;
+        border-radius: 6px;
+        @media ($mobile) {
+            width: 280px;
+        }
+    }
+    &__form-input:focus {
+        border: 2px solid #7F7F7F;
+    }
+    .custom-select {
+        position: relative;
+        width: 226px;
+        height: 50px;
+        border: 2px solid #7F7F7F;
+        background-color: #FFF;
+        color: #222;
+        border-radius: 6px;
+        font-family: 'ArialMT', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44px;
+        @media ($mobile) {
+            width: 280px;
+        }
+    }
+    .custom-select select {
+        display: none;
+    }
+    .select-selected {
+        color: #7F7F7F;
+        background-color: #FFF;
+        border-radius: 6px;
+    }
+    .select-selected::after {
+        position: absolute;
+        content: url('./../images/angle-arrow-down.png');
+        top: 2px;
+        right: 6px;
+        transform: rotate(180deg);
+        transition: all 0.2s ease-in-out;
+    }
+    .select-selected.select-arrow-active::after {
+        top: 0;
+        transform: rotate(360deg);
+    }
+    .select-items div,.select-selected {
+        border-bottom-color: transparent !important;
+        color: #222;
+        padding: 0px 12px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+    }
+    .select-items {
+        position: absolute;
+        background-color: white;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 99;
+        @media ($mobile) {
+            border: 2px solid #7F7F7F;
+            border-radius: 6px;
+        }
+    }
+    .select-hide {
+        display: none;
+    }
+    .select-items div:hover, .same-as-selected {
+        background-color: #EDEDED;
+    }
+    .select-items div {
+        position: relative;
+        color: #222;
+    }
+    .select-items div:hover::before {
+        content: url('./../images/Rectangle.png');
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    &__comments-area {
+        width: 100%;
+        height: 120px;
+        padding: 15px 19px;
+        border-radius: 6px;
+        border: 1px solid #E6E6E6;
+        background-color: #FFF;
+        font-size: 14px;
+        @media ($mobile) {
+            width: 280px;
+        }
+    }
+    &__comments-area:focus {
+        border: 2px solid #7F7F7F;
+    }
+    .btn {
+        width: 226px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-color: transparent;
+        border-radius: 2px;
+        background-color: #0062FF;
+        color: #FFF;
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2 ease-in;
+        @media ($mobile) {
+            width: 280px;
+        }
+    }
+    .btn:hover {
+        opacity: 0.8;
+    }
+    .btn:active {
+        position: relative;
+        top: 2px;
+    }
+}

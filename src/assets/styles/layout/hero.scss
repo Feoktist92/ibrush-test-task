@@ -1,0 +1,132 @@
+.hero {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @media ($mobile) {
+            padding-left: 20px;
+            margin-bottom: 34px;
+            padding-right: 0;
+        }
+    }
+    &__wrapper::after {
+        content: url('./../images/hero-line-bottom.svg');
+        position: absolute;
+        width: 100%;
+        bottom: -4px;
+        left: 0;
+        @media ($mobile) {
+            display: none
+        };
+    }
+    &__title {
+        @include h1();
+        margin-top: 80px;
+        margin-bottom: 64px;
+        @media ($mobile) {
+            text-shadow: unset;
+            font-size: 23px;
+            line-height: 25px;
+            margin: 40px 20px;
+        }
+    }
+    &__title::before {
+        position: absolute;
+        content: url('./../images/hero-line.svg');
+        top: -17px;
+        left: 0;
+        @media ($mobile) {
+            content: url('./../images/hero-line-mobile.svg');
+            top: -7px;
+        }
+    }
+    &__title::after {
+        position: absolute;
+        content: url('./../images/hero-line.svg');
+        top: -17px;
+        right: 0;
+        @media ($mobile) {
+            content: url('./../images/hero-line-mobile.svg');
+            top: -7px;
+        }
+    }
+    &__block {
+        position: relative;
+        margin-bottom: 20px;
+        @media ($mobile) {
+            overflow: scroll;
+            margin-bottom: 0;
+        }
+    }
+    &__block::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: calc(100% - 80px);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 9px 6px;
+        border-color: transparent transparent #ffffff transparent;
+        @media ($mobile) {
+            display: none;
+        }
+    }
+    &__img {
+        width: 738px;
+        @media ($mobile) {
+            margin-bottom: 15px;
+        }
+    }
+    &__img-date{
+        position: absolute;
+        top: 13px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 2;
+        padding: 24px 29px 22px;
+        @media ($mobile) {
+            display: none;
+        }
+            div {
+                width: 62px;
+                line-height: 25px;
+                text-align: center;
+                font-family: 'Merriweather';
+                color: #1A1A1A;
+            }
+            div:first-child {
+                font-size: 24px;
+                margin-bottom: 4px;
+                position: relative;
+            }
+            div:first-child::after {
+                position: absolute;
+                content: url('./../images/Triangle.svg');
+                top: -6px;
+                right: 2px;
+            }
+            div:last-child {
+                font-size: 16px;
+            }
+    }
+    &__text {
+        color: #202326;
+        font-family: "Arial";
+        font-size: 14px;
+        font-style: italic;
+        line-height: 18px;
+        margin-bottom: 50px;
+        @media ($mobile) {
+            padding-right: 20px;
+            order: -1;
+            margin-bottom: 26px;
+        }
+        span {
+            display:none;
+            @media ($mobile) {
+                display: inline;
+            }
+        }
+    }
+}

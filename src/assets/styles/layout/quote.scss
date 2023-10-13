@@ -1,0 +1,57 @@
+.quote {
+    font-family: "OpenSans";
+    line-height: 24px;
+    @media ($mobile) {
+        padding: 0 20px;
+    }
+    .title {
+        @include h2();
+        margin-top:55px;
+        margin-bottom: 30px;
+        @media ($mobile) {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+    &__block {
+        position: relative;
+        margin-left: auto;
+        margin-bottom: 45px;
+        max-width: calc(100% - 64px);
+        @media ($mobile) {
+         
+        }
+    }
+    &__text {
+        font-family: "OpenSans";
+        color: #1A1A1A;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 24px;
+        margin-bottom: 27px;
+        @media ($mobile) {
+            color: #1A1A1A;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 20px
+        }
+    }
+    &__block::before {
+        position: absolute;
+        content: url('./../images/quote-mark.png');
+        top: -7px;
+        right: calc(100% + 30px);
+    }
+    &__author {
+        color: #777;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 24px;
+        @media ($mobile) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

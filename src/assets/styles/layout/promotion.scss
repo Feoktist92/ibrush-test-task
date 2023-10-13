@@ -1,0 +1,36 @@
+.promotion {
+    padding: 34px 0 36px;
+    background-color: #EDEDED;
+    @media ($mobile) {
+        padding: 22px 20px 20px;
+    }
+    &__wrapper {
+        max-width: 610px;
+        margin: 0 auto;
+        @media ($mobile) {
+            width: 280px;
+        }
+    }
+    &__text {
+        color: #000;
+        font-family: "Helvetica";
+        font-size: 14px;
+        font-style: normal;
+        line-height: 18px;
+        margin-bottom: 17px;
+        @media ($mobile) {
+            margin-bottom: 10px;
+        }
+    }
+    &__img:last-child {
+        display: none;
+    }
+    @media ($mobile) {
+        &__img:first-of-type {
+            display: none;
+        };
+        &__img:last-child {
+            display: block;
+        };
+    }
+}
