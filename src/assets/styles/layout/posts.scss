@@ -44,10 +44,10 @@
     &__block-img:hover {
         box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
         transition: all 0.2s ease-in;
-    } 
+    }
     &__block-text {
         color: #272522;
-        font-family: "Consolas";
+        font-family: 'Consolas';
         font-size: 18px;
         font-weight: 700;
         line-height: 24px;
@@ -59,43 +59,57 @@
     .slideshow-dots {
         display: none;
     }
-    
-@media ($mobile) {
-    .slideshow-container {
-        position: relative;
-    }
-    .mySlides {
-        display: none;
-        width: 290px;
-        height: 348px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        text-decoration: none;
-    }
-    .slideshow-dots {
-        display: block;
-    }
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #CCCCCC;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-    .active, .dot:hover {
-        background-color: #0062FF;
-    }
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
+
+    @media ($mobile) {
+        .slideshow-container {
+            position: relative;
+        }
+        .mySlides {
+            display: none;
+            width: 290px;
+            height: 348px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+        .slideshow-dots {
+            display: block;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #cccccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active,
+        .dot:hover {
+            background-color: #0062ff;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
         }
     }
 }
-

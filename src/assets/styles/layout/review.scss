@@ -1,19 +1,20 @@
 .review {
-    background-color: #EDEDED;
+    background-color: #ededed;
     padding: 40px 0;
     font-family: 'ArialMT', sans-serif;
     @media ($mobile) {
         padding: 40px 20px;
     }
 
-    &__rating-title, &__comments-title {
+    &__rating-title,
+    &__comments-title {
         margin-bottom: 10px;
         color: #202326;
-        font-family: "Consolas";
+        font-family: 'Consolas';
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
-        line-height: 18px;  
+        line-height: 18px;
     }
     &__comments-title {
         margin-bottom: 15px;
@@ -54,19 +55,19 @@
         content: '★';
     }
     .rating-area > input:checked ~ label {
-        color: #FFB400;
+        color: #ffb400;
         text-shadow: 1px 1px #c60;
     }
     .rating-area:not(:checked) > label:hover,
     .rating-area:not(:checked) > label:hover ~ label {
-        color: #FFB400;
+        color: #ffb400;
     }
     .rating-area > input:checked + label:hover,
     .rating-area > input:checked + label:hover ~ label,
     .rating-area > input:checked ~ label:hover,
     .rating-area > input:checked ~ label:hover ~ label,
     .rating-area > label:hover ~ input:checked ~ label {
-        color: #FFB400;
+        color: #ffb400;
         text-shadow: 1px 1px goldenrod;
     }
     .rate-area > label:active {
@@ -119,14 +120,14 @@
         }
     }
     &__form-input:focus {
-        border: 2px solid #7F7F7F;
+        border: 2px solid #7f7f7f;
     }
     .custom-select {
         position: relative;
         width: 226px;
         height: 50px;
-        border: 2px solid #7F7F7F;
-        background-color: #FFF;
+        border: 2px solid #7f7f7f;
+        background-color: #fff;
         color: #222;
         border-radius: 6px;
         font-family: 'ArialMT', sans-serif;
@@ -142,8 +143,8 @@
         display: none;
     }
     .select-selected {
-        color: #7F7F7F;
-        background-color: #FFF;
+        color: #7f7f7f;
+        background-color: #fff;
         border-radius: 6px;
     }
     .select-selected::after {
@@ -158,7 +159,8 @@
         top: 0;
         transform: rotate(360deg);
     }
-    .select-items div,.select-selected {
+    .select-items div,
+    .select-selected {
         border-bottom-color: transparent !important;
         color: #222;
         padding: 0px 12px;
@@ -174,15 +176,16 @@
         right: 0;
         z-index: 99;
         @media ($mobile) {
-            border: 2px solid #7F7F7F;
+            border: 2px solid #7f7f7f;
             border-radius: 6px;
         }
     }
     .select-hide {
         display: none;
     }
-    .select-items div:hover, .same-as-selected {
-        background-color: #EDEDED;
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: #ededed;
     }
     .select-items div {
         position: relative;
@@ -199,15 +202,15 @@
         height: 120px;
         padding: 15px 19px;
         border-radius: 6px;
-        border: 1px solid #E6E6E6;
-        background-color: #FFF;
+        border: 1px solid #e6e6e6;
+        background-color: #fff;
         font-size: 14px;
         @media ($mobile) {
             width: 280px;
         }
     }
     &__comments-area:focus {
-        border: 2px solid #7F7F7F;
+        border: 2px solid #7f7f7f;
     }
     .btn {
         width: 226px;
@@ -217,8 +220,8 @@
         align-items: center;
         border-color: transparent;
         border-radius: 2px;
-        background-color: #0062FF;
-        color: #FFF;
+        background-color: #0062ff;
+        color: #fff;
         font-family: 'Arial', sans-serif;
         font-size: 14px;
         font-weight: 700;
