@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Тестовое / верстка / осень 2023",
     "scripts": {
-        "dev": "parcel src/index.html --open",
+        "dev": "parcel src/index.html",
         "build": "rm -rf build && parcel build src/index.html --dist-dir build"
     },
     "author": "Igor Feoktistov",
